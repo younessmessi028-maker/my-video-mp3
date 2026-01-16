@@ -43,8 +43,23 @@ button {
 
 <input type="text" id="videoURL" placeholder="ضع رابط الفيديو هنا">
 
-<button onclick="goConvert()">تحويل الآن</button>
+<h3>اختر أداة التحويل:</h3>
 
+<button onclick="window.open('https://www.media.io/', '_blank')">
+Media.io – تحويل فيديو
+</button>
+
+<button onclick="window.open('https://www.freeconvert.com/video-to-mp3', '_blank')">
+FreeConvert – MP4 إلى MP3
+</button>
+
+<button onclick="window.open('https://www.veed.io/tools/', '_blank')">
+VEED – أدوات فيديو
+</button>
+
+<p style="font-size:13px;color:gray;">
+نحن لا نستضيف أي محتوى، بل نوجّهك لأدوات خارجية.
+</p>
 <p id="msg"></p>
 </div>
 
@@ -64,4 +79,5 @@ function goConvert() {
 
 </body>
 </html>
+
 
