@@ -6,7 +6,10 @@ function convertVideo() {
         message.textContent = "ضع رابط فيديو صحيح!";
         message.style.color = "red";
     } else {
-        message.textContent = "تم تحويل الفيديو بنجاح! (اختباري)";
+        // فتح موقع أدوات الفيديو الخارجي
+        const externalSite = "https://www.onlinevideoconverter.com/ar/video-converter?url=" + encodeURIComponent(url);
+        window.open(externalSite, "_blank"); // يفتح نافذة جديدة
+        message.textContent = "تم تحويل الفيديو! سيتم فتح موقع التحويل في نافذة جديدة.";
         message.style.color = "green";
     }
 }
