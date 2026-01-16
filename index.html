@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="google-site-verification" content="ZsBvt-6rzFtM-pZDcQZ4kvxAUEFN_sruJFF_v0H-CvI" />
-    <title>تحميل أي فيديو إلى MP3</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>تحميل أي فيديو إلى MP3</h1>
-        <p>ادخل رابط الفيديو واضغط تحويل</p>
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1416117607092057"
-     crossorigin="anonymous"></script>
-        <input type="text" id="videoURL" placeholder="ضع رابط الفيديو هنا">
-        <button onclick="convertVideo()">تحويل الآن</button>
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1416117607092057"
-     crossorigin="anonymous"></script>
-        <p id="message"></p>
-    </div>
- <script>
-function convertVideo() {
-    const url = document.getElementById('videoURL').value;
-    const message = document.getElementById('message');
+<meta charset="UTF-8">
+<title>تحويل فيديو إلى MP3</title>
 
-    if(url === "") {
-        message.textContent = "ضع رابط فيديو صحيح!";
-        message.style.color = "red";
-    } else {
-        const externalSite = "https://www.onlinevideoconverter.com/ar/video-converter?url=" + encodeURIComponent(url);
-        window.open(externalSite, "_blank");
-        message.textContent = "تم تحويل الفيديو! سيتم فتح موقع التحويل في نافذة جديدة.";
-        message.style.color = "green";
-    }
+<!-- كود AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1416117607092057"
+crossorigin="anonymous"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    text-align: center;
 }
-</script>  
-   <script>
-function convertVideo() {
+.container {
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>تحويل أي فيديو إلى MP3</h2>
+
+<input type="text" id="videoURL" placeholder="ضع رابط الفيديو هنا">
+
+<button onclick="goConvert()">تحويل الآن</button>
+
+<p id="msg"></p>
+</div>
+
+<script>
+function goConvert() {
     var url = document.getElementById("videoURL").value;
-    var message = document.getElementById("message");
 
     if (url === "") {
-        message.innerHTML = "❌ حط رابط فيديو أولاً";
-        message.style.color = "red";
-    } else {
-        message.innerHTML = "✅ يتم فتح موقع التحويل...";
-        message.style.color = "green";
-        window.open("https://www.y2mate.com/", "_blank");
+        document.getElementById("msg").innerHTML = "❌ حط رابط فيديو";
+        return;
     }
+
+    // يفتح موقع التحويل فقط (بدون 404)
+    window.location.href = "https://www.y2mate.com/";
 }
 </script>
+
 </body>
-
 </html>
-
-
-
