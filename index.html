@@ -35,9 +35,24 @@ function convertVideo() {
     }
 }
 </script>  
-    <script src="script.js"></script>
+   <script>
+function convertVideo() {
+    var url = document.getElementById("videoURL").value;
+    var message = document.getElementById("message");
+
+    if (url === "") {
+        message.innerHTML = "❌ حط رابط فيديو أولاً";
+        message.style.color = "red";
+    } else {
+        message.innerHTML = "✅ يتم فتح موقع التحويل...";
+        message.style.color = "green";
+        window.open("https://www.y2mate.com/", "_blank");
+    }
+}
+</script>
 </body>
 
 </html>
+
 
 
